@@ -22,7 +22,7 @@ subject to:
   <img width="100" height="50" src="https://latex.codecogs.com/gif.image?\dpi{300}&space;\sum_{i}&space;x_{ij}&space;\ge&space;1">
 </p>
 <p align="center">
-  <img width="150" height="50" src="https://latex.codecogs.com/gif.image?\dpi{300}&space;\sum_{ij}&space;(p_{ij}-p)x_{ij}&space;\le&space;0">
+  <img width="170" height="50" src="https://latex.codecogs.com/gif.image?\dpi{300}&space;\sum_{i,j}&space;(p_{ij}-p)x_{ij}&space;\le&space;0">
 </p>
 
 Where:
