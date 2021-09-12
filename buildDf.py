@@ -25,7 +25,7 @@ def getInfo_(fii_):
         yield_ = float(soup.find("td", text="Yield 12M").find_next_sibling("td").text.strip().replace(',','.').replace('%',''))
 
     except:
-        hmtl_ = 'https://www.infomoney.com.br/cotacoes/fundo-imobiliario-' + fii_
+        html_ = 'https://www.infomoney.com.br/cotacoes/fundo-imobiliario-' + fii_
         response = urllib.request.urlopen(html_)
 
         html_doc = response.read()
