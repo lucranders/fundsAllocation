@@ -40,16 +40,16 @@ In the same folder this project was cloned, two files must be created:
 * ListFiis.txt - Must contain the chosen Real Estate shares of desire and from which wallet it comes from (without header). File example:
 
 <p align="center">
-HGCR11,2
-VISC11,1
-LUGG11,1
-RECT11,3
-CPTS11,2
-JSRE11,3
-HGRU11,1
-HSLG11,4
-RBRP11,3
-VILG11,4
+HGCR11,2<br/>
+VISC11,1<br/>
+LUGG11,1<br/>
+RECT11,3<br/>
+CPTS11,2<br/>
+JSRE11,3<br/>
+HGRU11,1<br/>
+HSLG11,4<br/>
+RBRP11,3<br/>
+VILG11,4<br/>
 
 </p>
 
