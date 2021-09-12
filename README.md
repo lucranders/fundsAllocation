@@ -65,3 +65,15 @@ When both files exist and are correctly filled, it is only needed to execute the
 <p align="center">
   <img width="400" height="300" src="output.PNG">
 </p>
+
+The printed columns are:
+
+* FII - The enterprise of desire;
+* pvp - Relation between net worth and amount of total share amount;
+* value - Cost of each share;
+* dy - Dividend yield of the last 12 months;
+* Part - Wallet to which the enterprise is part of;
+* Qt - Suggested amount of shares to buy;
+* expectedIncome12M - The expected income, based on the last 12 months dividend yield. It is the dividend yield multiplied by the cost of each share.
+
+Below the table is printed the cost of the suggestion and the total expected income in the next 12 months.
