@@ -12,7 +12,6 @@ import pandas as pd
 
 def getInfo_(fii_):
 
-    print(fii_)
     try:
         response = urllib.request.urlopen('https://www.infomoney.com.br/cotacoes/fundos-imobiliarios-' + fii_)
     except:
@@ -35,6 +34,8 @@ def getInfo_(fii_):
         pvp_ = float(soup.find("td", text="P/VP").find_next_sibling("td").text.strip().replace(',','.'))
         open_= float(soup.find("td", text="Abertura").find_next_sibling("td").text.strip().replace(',','.'))
         yield_ = float(soup.find("td", text="Yield 12M").find_next_sibling("td").text.strip().replace(',','.').replace('%',''))
+
+    print(fii_ + ': done')
 
     return([fii_,pvp_,open_,yield_])
 
