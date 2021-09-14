@@ -19,21 +19,23 @@ def getInfo_(fii_):
 
     html_doc = response.read()
     soup = BeautifulSoup(html_doc , 'html.parser')
+
     try:
         pvp_ = float(soup.find("td", text="P/VP").find_next_sibling("td").text.strip().replace(',','.'))
-        open_= float(soup.find("td", text="Abertura").find_next_sibling("td").text.strip().replace(',','.'))
-        yield_ = float(soup.find("td", text="Yield 12M").find_next_sibling("td").text.strip().replace(',','.').replace('%',''))
-
     except:
-        html_ = 'https://www.infomoney.com.br/cotacoes/fundo-imobiliario-' + fii_
-        response = urllib.request.urlopen(html_)
-
-        html_doc = response.read()
-        soup = BeautifulSoup(html_doc , 'html.parser')
-
-        pvp_ = float(soup.find("td", text="P/VP").find_next_sibling("td").text.strip().replace(',','.'))
+        pvp_ = 0
+    try:
         open_= float(soup.find("td", text="Abertura").find_next_sibling("td").text.strip().replace(',','.'))
+    except:
+        try:
+            open_ = float(soup.find("td", text="Fechamento anterior").find_next_sibling("td").text.strip().replace(',','.'))
+        except:
+            open_ = 0
+
+    try:
         yield_ = float(soup.find("td", text="Yield 12M").find_next_sibling("td").text.strip().replace(',','.').replace('%',''))
+    except:
+        yield_ = 0
 
     print(fii_ + ': done')
 
